@@ -1,102 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MovieHive App Policies</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #222;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MovieHive Policies</title>
+<style>
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #6200ea;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.tab:hover {
+  background: #eee;
+}
+
+.tab.active {
+  border-bottom: 3px solid #6200ea;
+  color: #6200ea;
+}
+
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #6200ea;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+ul {
+  margin: 10px 0 20px 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #fafafa;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1> MovieHive App Policies</h1>
 
-    <h2>1. Purpose of the App</h2>
-    <p>
-      MovieHive is an app designed to help users <strong>discover movies and TV shows</strong>. 
-      It provides information such as descriptions, ratings, cast, genres, country of origin, and airing details. 
-      The app does <strong>not host or stream movies/TV shows</strong>. It only displays publicly available metadata.
-    </p>
+<header>📜 MovieHive Policies</header>
 
-    <h2>2. Data Sources</h2>
-    <p>
-      All movie and TV show data shown in MovieHive comes from trusted third-party APIs:
-    </p>
-    <ul>
-      <li><a href="https://www.tvmaze.com/" target="_blank">TVMaze</a></li>
-      <li><a href="https://www.themoviedb.org/" target="_blank">The Movie Database (TMDb)</a></li>
-    </ul>
-    <p>
-      We do not claim ownership of this content. Credit goes to the respective providers.
-    </p>
+<div class="tab-container">
+  <div class="tab" onclick="showTab('tos')">Terms of Service</div>
+  <div class="tab" onclick="showTab('privacy')">Privacy Policy</div>
+  <div class="tab" onclick="showTab('copyright')">Copyright Policy</div>
+</div>
 
-    <h2>3. Copyright & Content Concerns</h2>
-    <p>
-      If you believe that your copyrighted material appears in MovieHive without proper authorization, 
-      please contact us at:
-    </p>
-    <p><strong>Email:</strong> moviehiveapp@gmail.com</p>
-    <p>
-      We will review and take appropriate action promptly.
-    </p>
+<div class="content" id="tos">
+  <h2>Terms of Service</h2>
+  <p><b>1. Purpose of the App</b><br>
+    MovieHive helps users discover movies and TV shows by providing descriptions, ratings, cast, genres, country of origin, and airing details.<br>
+    <b>MovieHive does not host or stream content</b>. It only displays metadata from trusted third-party sources.</p>
 
-    <h2>4. Fair Use & Limitations</h2>
-    <ul>
-      <li>MovieHive is strictly for <strong>informational and educational purposes</strong>.</li>
-      <li>No copyrighted media (such as full movies or shows) is hosted or distributed.</li>
-      <li>Users are responsible for how they use the information provided.</li>
-    </ul>
+  <p><b>2. Acceptable Use</b></p>
+  <ul>
+    <li>You agree not to misuse the app for illegal purposes.</li>
+    <li>You may not reverse-engineer, copy, or exploit MovieHive’s services.</li>
+  </ul>
 
-    <h2>5. Contact</h2>
-    <p>
-      For questions, suggestions, or concerns, reach us at: <br>
-      <strong>Email:</strong> moviehiveapp@gmail.com
-    </p>
+  <p><b>3. Notifications</b><br>
+    By granting notification permission, you agree to receive updates about:
+  <ul>
+    <li>New app features or improvements.</li>
+    <li>Watchlist reminders & airing alerts.</li>
+    <li>General updates about movies and TV shows.</li>
+  </ul>
+    You can disable notifications anytime in your device settings.
+  </p>
 
-    <footer>
-      &copy; <span id="year"></span> MovieHive App. All rights reserved.
-    </footer>
-  </div>
+  <p><b>4. Limitation of Liability</b><br>
+    MovieHive provides information “as is” and makes no guarantees about accuracy or completeness.</p>
 
-  <script>
-    // Auto-update year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <p><b>5. Governing Law</b><br>
+    These terms are governed by the laws of your country.</p>
+</div>
+
+<div class="content" id="privacy" style="display:none;">
+  <h2>Privacy Policy</h2>
+  <p><b>1. Data We Collect</b></p>
+  <ul>
+    <li>MovieHive does not require accounts and does not collect personal data by default.</li>
+    <li>If you contact us, we may store your email for support purposes.</li>
+    <li>Analytics (if enabled) may collect anonymized usage data.</li>
+    <li>If you enable notifications, a device token may be stored to deliver updates.</li>
+  </ul>
+
+  <p><b>2. How We Use Data</b></p>
+  <ul>
+    <li>To improve app performance.</li>
+    <li>To provide personalized features like watchlists.</li>
+    <li>To send notifications about updates & reminders.</li>
+  </ul>
+
+  <p><b>3. Data Sharing</b><br>
+    We never sell your data. Limited sharing may occur with trusted third-party providers like TVMaze, TMDb, or notification services.</p>
+
+  <p><b>4. User Rights</b></p>
+  <ul>
+    <li>Request deletion of any personal data we hold (e.g., support emails).</li>
+    <li>Opt out of analytics (if implemented).</li>
+    <li>Disable notifications anytime in device settings.</li>
+  </ul>
+
+  <p><b>5. Contact</b><br>
+    📧 moviehiveapp@gmail.com</p>
+</div>
+
+<div class="content" id="copyright" style="display:none;">
+  <h2>Copyright Policy</h2>
+  <p><b>1. Content Ownership</b><br>
+    All movie and TV show information is sourced from third-party APIs (TVMaze, TMDb).  
+    We do not claim ownership of this content.</p>
+
+  <p><b>2. User Responsibility</b><br>
+    MovieHive is for informational and educational purposes only. Users are responsible for their use of the data.</p>
+
+  <p><b>3. Infringement Concerns</b><br>
+    If you believe your copyrighted material appears in MovieHive without authorization, contact us at:<br>
+    📧 moviehiveapp@gmail.com<br>
+    We will review and act promptly.</p>
+</div>
+
+<footer>
+  © 2025 MovieHive. All Rights Reserved.
+</footer>
+
+<script>
+function showTab(tabId) {
+  document.getElementById("tos").style.display = "none";
+  document.getElementById("privacy").style.display = "none";
+  document.getElementById("copyright").style.display = "none";
+
+  document.getElementById(tabId).style.display = "block";
+
+  let tabs = document.querySelectorAll(".tab");
+  tabs.forEach(tab => tab.classList.remove("active"));
+  document.querySelector(.tab[onclick="showTab('${tabId}')"]).classList.add("active");
+}
+
+// Load the correct tab based on ?tab= parameter
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get("tab") || "tos"; // default = Terms of Service
+  showTab(tab);
+};
+</script>
 </body>
 </html>
-
