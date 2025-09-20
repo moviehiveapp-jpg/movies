@@ -22,29 +22,6 @@ header {
   font-weight: bold;
 }
 
-.tab-container {
-  display: flex;
-  justify-content: center;
-  background: #fff;
-  border-bottom: 2px solid #ddd;
-}
-
-.tab {
-  padding: 15px 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-weight: 500;
-}
-
-.tab:hover {
-  background: #eee;
-}
-
-.tab.active {
-  border-bottom: 3px solid #6200ea;
-  color: #6200ea;
-}
-
 .content {
   max-width: 900px;
   margin: 30px auto;
@@ -82,12 +59,6 @@ footer {
 
 <header>📜 MovieHive Policies</header>
 
-<div class="tab-container">
-  <div class="tab" onclick="showTab('tos')">Terms of Service</div>
-  <div class="tab" onclick="showTab('privacy')">Privacy Policy</div>
-  <div class="tab" onclick="showTab('copyright')">Copyright Policy</div>
-</div>
-
 <div class="content" id="tos">
   <h2>Terms of Service</h2>
   <p><b>1. Purpose of the App</b><br>
@@ -117,7 +88,7 @@ footer {
     These terms are governed by the laws of your country.</p>
 </div>
 
-<div class="content" id="privacy" style="display:none;">
+<div class="content" id="privacy">
   <h2>Privacy Policy</h2>
   <p><b>1. Data We Collect</b></p>
   <ul>
@@ -148,7 +119,7 @@ footer {
     📧 moviehiveapp@gmail.com</p>
 </div>
 
-<div class="content" id="copyright" style="display:none;">
+<div class="content" id="copyright">
   <h2>Copyright Policy</h2>
   <p><b>1. Content Ownership</b><br>
     All movie and TV show information is sourced from third-party APIs (TVMaze, TMDb).  
@@ -167,26 +138,5 @@ footer {
   © 2025 MovieHive. All Rights Reserved.
 </footer>
 
-<script>
-function showTab(tabId) {
-  document.getElementById("tos").style.display = "none";
-  document.getElementById("privacy").style.display = "none";
-  document.getElementById("copyright").style.display = "none";
-
-  document.getElementById(tabId).style.display = "block";
-
-  let tabs = document.querySelectorAll(".tab");
-  tabs.forEach(tab => tab.classList.remove("active"));
-  document.querySelector(.tab[onclick="showTab('${tabId}')"]).classList.add("active");
-}
-
-// Load the correct tab based on ?tab= parameter
-window.onload = function() {
-  const params = new URLSearchParams(window.location.search);
-  const tab = params.get("tab") || "tos"; // default = Terms of Service
-  showTab(tab);
-};
-  
-</script>
 </body>
 </html>
